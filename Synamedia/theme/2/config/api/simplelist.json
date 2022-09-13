@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "image": {
+        "src": "zeecinema.jpeg"
+      }
+    },
+    {
+      "label": {
+        "text": "This is Label"
+      }
+    }
+  ]
+}

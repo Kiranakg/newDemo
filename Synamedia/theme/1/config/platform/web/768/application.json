@@ -1,0 +1,44 @@
+{
+  "pages": [
+    {
+      "id": 1,
+      "name": "home",
+      "configPath": "mobile_product.json",
+      "routePath": "/home",
+      "component": "Home"
+    },
+    {
+      "id": 2,
+      "name": "details",
+      "configPath": "details.json",
+      "routePath": "/details/:type/:id",
+      "component": "page"
+    },
+    {
+      "id": 3,
+      "name": "player",
+      "configPath": "player_product.json",
+      "routePath": "/player/:type/:id/:videoId",
+      "component": "page"
+    },
+    {
+      "id": 4,
+      "name": "viewall",
+      "configPath": "viewall.json",
+      "routePath": "/viewall/:id",
+      "component": "page"
+    },
+    {
+      "id": 5,
+      "name": "myprofile",
+      "configPath": "my_profile.json",
+      "routePath": "/myprofile",
+      "component": "page"
+    }
+  ],
+  "features": {
+    "keyboard": {
+      "enabled": true
+    }
+  }
+}

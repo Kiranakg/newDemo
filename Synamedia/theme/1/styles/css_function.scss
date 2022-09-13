@@ -1,0 +1,55 @@
+/*
+ * Copyright (C) 2014-2018 L&T Technology Services, All Rights Reserved.
+ *
+ * This source code and any compilation or derivative thereof is the
+ * proprietary information of L&T and is confidential in nature.
+ * Under no circumstances is this software to be exposed to or placed under
+ * an Open Source License of any type without the expressed written permission
+ * of L&T.
+ */
+
+/**
+ * @author Suryaprakash Thirumurugesan
+ */
+
+@function getImage($relativePath) {
+  @return "../assets/images/" + $relativePath;
+}
+
+@mixin absolute($x, $y, $w: null, $h: null) {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  @if ($w) {
+    width: $w;
+  }
+  @if ($h) {
+    height: $h;
+  }
+
+  left: $x;
+  top: $y;
+}
+
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin fontFamily($font1) {
+  font-family:
+    $font1,
+    'Noto Sans Kannada',
+    'Noto Sans Devanagari',
+    'Noto Sans Tamil',
+    'Noto Sans Malayalam',
+    'Noto Sans Gujarati',
+    'Lohit Bengali',
+    'Noto Sans Oriya',
+    'Noto Sans Thai',
+    'Noto Sans Telugu',
+    'Noto Naskh Arabic',
+    'Noto Sans Gurmukhi',
+    sans-serif;
+}

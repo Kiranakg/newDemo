@@ -1,0 +1,185 @@
+{
+  "keys": {
+    "defaultMode": "small",
+    "small": [
+      [
+        { "text": "q", "functionality": "text" },
+        { "text": "w", "functionality": "text" },
+        { "text": "e", "functionality": "text" },
+        { "text": "r", "functionality": "text" },
+        { "text": "t", "functionality": "text" },
+        { "text": "y", "functionality": "text" },
+        { "text": "u", "functionality": "text" },
+        { "text": "i", "functionality": "text" },
+        { "text": "o", "functionality": "text" },
+        { "text": "p", "functionality": "text" }
+      ],
+      [
+        { "text": "a", "functionality": "text" },
+        { "text": "s", "functionality": "text" },
+        { "text": "d", "functionality": "text" },
+        { "text": "f", "functionality": "text" },
+        { "text": "g", "functionality": "text" },
+        { "text": "h", "functionality": "text" },
+        { "text": "j", "functionality": "text" },
+        { "text": "k", "functionality": "text" },
+        { "text": "l", "functionality": "text" },
+        { "text": "⌫", "functionality": "DELETE" }
+      ],
+      [
+        { "text": "z", "functionality": "text" },
+        { "text": "x", "functionality": "text" },
+        { "text": "c", "functionality": "text" },
+        { "text": "v", "functionality": "text" },
+        { "text": "b", "functionality": "text" },
+        { "text": "n", "functionality": "text" },
+        { "text": "m", "functionality": "text" },
+        { "text": "!", "functionality": "text" },
+        { "text": ".", "functionality": "text" },
+        { "text": ",", "functionality": "text" }
+      ],
+      [
+        { "text": "a/A", "functionality": "CHANGE_MODE", "mode": "caps", "width": 2 },
+        { "text": "123", "functionality": "CHANGE_MODE", "mode": "num", "width": 2 },
+        { "text": "space", "functionality": "SPACE", "width": 2 },
+        { "text": "clear", "functionality": "CLEAR", "width": 2 },
+        { "text": "⏎", "functionality": "ENTER", "width": 2 }
+      ]
+    ],
+    "caps": [
+      [
+        { "text": "Q", "functionality": "text" },
+        { "text": "W", "functionality": "text" },
+        { "text": "E", "functionality": "text" },
+        { "text": "R", "functionality": "text" },
+        { "text": "T", "functionality": "text" },
+        { "text": "Y", "functionality": "text" },
+        { "text": "U", "functionality": "text" },
+        { "text": "I", "functionality": "text" },
+        { "text": "O", "functionality": "text" },
+        { "text": "P", "functionality": "text" }
+      ],
+      [
+        { "text": "A", "functionality": "text" },
+        { "text": "S", "functionality": "text" },
+        { "text": "D", "functionality": "text" },
+        { "text": "F", "functionality": "text" },
+        { "text": "G", "functionality": "text" },
+        { "text": "H", "functionality": "text" },
+        { "text": "J", "functionality": "text" },
+        { "text": "K", "functionality": "text" },
+        { "text": "L", "functionality": "text" },
+        { "text": "⌫", "functionality": "DELETE" }
+      ],
+      [
+        { "text": "Z", "functionality": "text" },
+        { "text": "X", "functionality": "text" },
+        { "text": "C", "functionality": "text" },
+        { "text": "V", "functionality": "text" },
+        { "text": "B", "functionality": "text" },
+        { "text": "N", "functionality": "text" },
+        { "text": "M", "functionality": "text" },
+        { "text": "!", "functionality": "text" },
+        { "text": ".", "functionality": "text" },
+        { "text": ",", "functionality": "text" }
+      ],
+      [
+        { "text": "a/A", "functionality": "CHANGE_MODE", "mode": "small", "width": 2 },
+        { "text": "123", "functionality": "CHANGE_MODE", "mode": "num", "width": 2 },
+        { "text": "space", "functionality": "SPACE", "width": 2 },
+        { "text": "clear", "functionality": "CLEAR", "width": 2 },
+        { "text": "⏎", "functionality": "ENTER", "width": 2 }
+      ]
+    ],
+    "num": [
+      [
+        { "text": "1", "functionality": "text" },
+        { "text": "2", "functionality": "text" },
+        { "text": "3", "functionality": "text" },
+        { "text": "4", "functionality": "text" },
+        { "text": "5", "functionality": "text" },
+        { "text": "6", "functionality": "text" },
+        { "text": "7", "functionality": "text" },
+        { "text": "8", "functionality": "text" },
+        { "text": "9", "functionality": "text" },
+        { "text": "0", "functionality": "text" }
+      ],
+      [
+        { "text": "@", "functionality": "text" },
+        { "text": "#", "functionality": "text" },
+        { "text": "$", "functionality": "text" },
+        { "text": "_", "functionality": "text" },
+        { "text": "&", "functionality": "text" },
+        { "text": "-", "functionality": "text" },
+        { "text": "+", "functionality": "text" },
+        { "text": "(", "functionality": "text" },
+        { "text": ")", "functionality": "text" },
+        { "text": "⌫", "functionality": "DELETE" }
+      ],
+      [
+        { "text": "=\\<", "functionality": "CHANGE_MODE", "mode": "symb" },
+        { "text": "*", "functionality": "text" },
+        { "text": "\"", "functionality": "text" },
+        { "text": "'", "functionality": "text" },
+        { "text": ":", "functionality": "text" },
+        { "text": ";", "functionality": "text" },
+        { "text": "!", "functionality": "text" },
+        { "text": "?", "functionality": "text" },
+        { "text": "{", "functionality": "text" },
+        { "text": "}", "functionality": "text" }
+      ],
+      [
+        { "text": "a/A", "functionality": "CHANGE_MODE", "mode": "small", "width": 2 },
+        { "text": "abc", "functionality": "CHANGE_MODE", "mode": "small", "width": 2 },
+        { "text": "space", "functionality": "SPACE", "width": 2 },
+        { "text": "clear", "functionality": "CLEAR", "width": 2 },
+        { "text": "⏎", "functionality": "ENTER", "width": 2 }
+      ]
+    ],
+    "symb": [
+      [
+        { "text": "~", "functionality": "text" },
+        { "text": "`", "functionality": "text" },
+        { "text": "|", "functionality": "text" },
+        { "text": "×", "functionality": "text" },
+        { "text": "÷", "functionality": "text" },
+        { "text": "∕", "functionality": "text" },
+        { "text": "∑", "functionality": "text" },
+        { "text": "=", "functionality": "text" },
+        { "text": "≤", "functionality": "text" },
+        { "text": "≥", "functionality": "text" }
+      ],
+      [
+        { "text": "¢", "functionality": "text" },
+        { "text": "£", "functionality": "text" },
+        { "text": "¥", "functionality": "text" },
+        { "text": "₹", "functionality": "text" },
+        { "text": "&", "functionality": "text" },
+        { "text": "‼", "functionality": "text" },
+        { "text": "⁇", "functionality": "text" },
+        { "text": "<", "functionality": "text" },
+        { "text": ">", "functionality": "text" },
+        { "text": "⌫", "functionality": "DELETE" }
+      ],
+      [
+        { "text": "@\\#", "functionality": "CHANGE_MODE", "mode": "num" },
+        { "text": "%", "functionality": "text" },
+        { "text": "©", "functionality": "text" },
+        { "text": "®", "functionality": "text" },
+        { "text": "™", "functionality": "text" },
+        { "text": "♬", "functionality": "text" },
+        { "text": "♯", "functionality": "text" },
+        { "text": "♪", "functionality": "text" },
+        { "text": "[", "functionality": "text" },
+        { "text": "]", "functionality": "text" }
+      ],
+      [
+        { "text": "a/A", "functionality": "CHANGE_MODE", "mode": "small", "width": 2 },
+        { "text": "abc", "functionality": "CHANGE_MODE", "mode": "small", "width": 2 },
+        { "text": "space", "functionality": "SPACE", "width": 2 },
+        { "text": "clear", "functionality": "CLEAR", "width": 2 },
+        { "text": "⏎", "functionality": "ENTER", "width": 2 }
+      ]
+    ]
+  }
+}

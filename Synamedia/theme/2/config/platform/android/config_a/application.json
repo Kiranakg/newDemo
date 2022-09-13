@@ -1,0 +1,47 @@
+{
+    "pages":[
+        {
+            "id": 1,
+            "name":"home",
+            "configPath":"mobile_product.json",
+            "routePath": "/home",
+            "component": "Home"
+        },
+        {
+            "id": 2,
+            "name":"player",
+            "configPath":"player_product.json",
+            "routePath": "/player/:type/:id/:videoId",
+            "component": "page"
+        },
+        {
+            "id": 3,
+            "name":"viewall",
+            "configPath":"viewall.json",
+            "routePath": "/viewall/:id",
+            "component": "page"
+        },
+        {
+            "id": 4,
+            "name":"myprofile",
+            "configPath":"my_profile.json",
+            "routePath": "/myprofile",
+            "component": "page"
+        },
+        {
+            "id": 5,
+            "name":"epg",
+            "configPath":"desktop_epg.json",
+            "routePath": "/epg/:day",
+            "component": "page"
+        },
+        {
+            "id": 6,
+            "name":"search_android_mobile_zee",
+            "configPath":"search.json",
+            "routePath": "/search",
+            "component": "page"
+        }
+    ]
+}
+

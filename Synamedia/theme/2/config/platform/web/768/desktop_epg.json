@@ -1,0 +1,82 @@
+{
+  "id": "Guide",
+  "layout": {
+    "_comments": "Layout",
+    "component": "epg",
+    "props": {
+      "className": "epg_main desktop",
+      "name": "Root epg",
+      "items": [
+      {
+        "_comments": "tvGuide grid component",
+        "component": "epg",
+        "props": {
+          "className": "tv-guide",
+          "past": 1,
+          "future": 1,
+          "style": {},
+          "items": [{
+            "_comments": "Channel bar",
+            "component": "list",
+            "name": "channelBar",
+            "props": {
+              "disableHeader": true,
+              "horizontal": true,
+              "circular": false,
+              "isCarousel": false,
+              "style": {},
+              "items": "items",
+              "className": "channel-bar",
+              "isChannel": true
+            },
+            "dataURL": "channelBar",
+            "itemRenderer": [{
+              "component": "epgItem",
+              "props": {
+                "day": 0,
+                "channelId": "id",
+                "action": "channelClick",
+                "style": {},
+                "img": "icon",
+                "className": "guide-channel"
+              }
+            }]
+          },
+          {
+            "_comments": "Program list",
+            "component": "list",
+            "name": "mobileProgramList",
+            "props": {
+              "disableHeader": true,
+              "horizontal": false,
+              "circular": false,
+              "isCarousel": false,
+              "items": "0",
+              "channelId": "id",
+              "className": "program-bar"
+            },
+            "dataURL": "mobileProgramList",
+            "itemRenderer": [
+              {
+                "component": "epgItem",
+                "props": {
+                  "action": "",
+                  "style": {},
+                  "isProgram": true,
+                  "text": "title",
+                  "start_time": "start_time",
+                  "duration": "duration",
+                  "className": "guide-program no-cursor"
+                }
+              }
+            ]
+          }
+          ]
+        }
+      }
+      ]
+    }
+  },
+  "theme": {},
+  "components": {}
+}

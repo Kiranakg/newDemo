@@ -1,0 +1,250 @@
+{
+  "id": "Guide",
+  "layout": {
+    "_comments": "Layout",
+    "component": "epg",
+    "props": {
+      "className": "epg_main desktop",
+      "name": "Root epg",
+      "items": [
+        {
+          "_comments": "Days bar",
+          "component": "list",
+          "name": "daysBar",
+          "props": {
+            "setDay": true,
+            "startIndex": -4,
+            "disableHeader": true,
+            "horizontal": true,
+            "circular": false,
+            "isCarousel": false,
+            "style": {},
+            "items": "data",
+            "className": "days-bar"
+          },
+          "dataURL": "daysBar",
+          "itemRenderer": [
+            {
+              "component": "button",
+              "props": {
+                "setEpgDay": true,
+                "action": "Route_epg/{day}",
+                "style": {},
+                "text": "day",
+                "className": "guide-days"
+              }
+            }
+          ]
+        },
+        {
+          "_comments": "tvGuide grid component",
+          "component": "epg",
+          "props": {
+            "navigation": "center",
+            "className": "tv-guide",
+            "eventLength": 400,
+            "style": {
+              "width": "100%"
+            },
+            "items": [
+              {
+                "_comments": "Channel bar",
+                "component": "list",
+                "name": "channelBar",
+                "props": {
+                  "disableHeader": true,
+                  "useIScroll": true,
+                  "iScrollID": "channellist",
+                  "scrollSync": {
+                    "vertical": [ "eventschannellist" ],
+                    "horizontal": []
+                  },
+                  "iScrollOptions": {
+                    "mouseWheel": true,
+                    "scrollbars": false,
+                    "scrollY": true,
+                    "momentum": false,
+                    "probeType": 3
+                  },
+                  "iScrollWrapperStyle": {
+                    "height": "calc(100vh - 150px)"
+                  },
+                  "iScrollContainerStyle": {},
+                  "horizontal": false,
+                  "circular": false,
+                  "isCarousel": false,
+                  "style": {},
+                  "items": "items",
+                  "className": "channel-bar"
+                },
+                "dataURL": "channelBar",
+                "itemRenderer": [
+                  {
+                    "component": "button",
+                    "props": {
+                      "action": "",
+                      "style": {},
+                      "img": "icon",
+                      "className": "guide-channel"
+                    }
+                  }
+                ]
+              },
+              {
+                "component": "epg",
+                "props": {
+                  "className": "epg-program-grid",
+                  "eventLength": 400,
+                  "navigation": "center",
+                  "items": [
+                    {
+                      "_comments": "Time bar",
+                      "component": "list",
+                      "name": "timeBar",
+                      "props": {
+                        "disableHeader": true,
+                        "useIScroll": true,
+                        "iScrollID": "timebar",
+                        "scrollSync": {
+                          "vertical": [],
+                          "horizontal": [ "eventlist" ]
+                        },
+                        "livePointer": "true",
+                        "eventLength": 400,
+                        "iScrollOptions": {
+                          "mouseWheel": false,
+                          "scrollbars": false,
+                          "scrollX": true,
+                          "scrollY": true,
+                          "momentum": false,
+                          "probeType": 3
+                        },
+                        "iScrollWrapperStyle": {
+                          "height": "100px",
+                          "width": "calc(100vw - 400px)"
+                        },
+                        "iScrollContainerStyle": {
+                          "width": "6000px"
+                        },
+                        "horizontal": true,
+                        "circular": false,
+                        "isCarousel": false,
+                        "style": {
+                          "width": "1000px"
+                        },
+                        "items": "data",
+                        "className": "time-bar"
+                      },
+                      "dataURL": "timeBar",
+                      "itemRenderer": [
+                        {
+                          "component": "button",
+                          "props": {
+                            "action": "",
+                            "style": {},
+                            "text": "time",
+                            "className": "guide-time"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "_comments": "Program list",
+                "component": "list",
+                "name": "channelList",
+                "props": {
+                  "disableHeader": true,
+                  "useIScroll": true,
+                  "iScrollID": "eventschannellist",
+                  "scrollSync": {
+                    "vertical": [ "channellist" ],
+                    "horizontal": []
+                  },
+                  "iScrollOptions": {
+                    "mouseWheel": true,
+                    "scrollbars": false,
+                    "scrollY": true,
+                    "momentum": false,
+                    "probeType": 3
+                  },
+                  "iScrollWrapperStyle": {
+                    "position": "absolute",
+                    "left": "400px",
+                    "width": "calc(100vw - 400px)",
+                    "height": "calc(100vh - 150px)"
+                  },
+                  "individualItemHeight": 100,
+                  "iScrollContainerStyle": {},
+                  "horizontal": false,
+                  "style": {
+                    "position": "absolute"
+                  },
+                  "items": "data",
+                  "className": "program-bar"
+                },
+                "dataURL": "channelList",
+                "itemRenderer": [
+                  {
+                    "component": "list",
+                    "props": {
+                      "disableHeader": true,
+                      "useIScroll": true,
+                      "iScrollID": "eventlist",
+                      "scrollSync": {
+                        "vertical": [],
+                        "horizontal": [ "timebar", "eventlist" ]
+                      },
+                      "iScrollOptions": {
+                        "mouseWheel": false,
+                        "scrollbars": false,
+                        "scrollX": true,
+                        "momentum": false,
+                        "probeType": 3
+                      },
+                      "iScrollWrapperStyle": {
+                        "height": "100px",
+                        "width": "calc(100vw - 400px)"
+                      },
+                      "iScrollContainerStyle": {
+                        "width": "6000px"
+                      },
+                      "style": {},
+                      "_comment": "this is carousel",
+                      "horizontal": true,
+                      "circular": false,
+                      "isCarousel": false,
+                      "items": "0",
+                      "serviceUrl": "programUrl"
+                    },
+                    "itemRenderer": [
+                      {
+                        "component": "epgItem",
+                        "props": {
+                          "action": "",
+                          "iScrollID": "eventlist",
+                          "itemHeight": 100,
+                          "itemWidth": 400,
+                          "style": {},
+                          "duration": "duration",
+                          "start_time": "start_time",
+                          "end_time": "end_time",
+                          "text": "title",
+                          "className": "guide-program no-cursor first-focus"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "theme": {},
+  "components": {}
+}

@@ -1,0 +1,478 @@
+{
+  "id": "search",
+  "layout": {
+      "_comments": "Layout",
+      "component": "collection",
+      "props": {
+          "className": "home_product mobile", 
+          "items": [{
+                  "_comments": "Header component",
+                  "component": "collection",
+                  "stateObject":{
+                      "showLanguages": false
+                  },
+                  "props": {
+                      "className": "header",
+                      "style": {
+                          "width": "100%"
+                      },
+                      "items": [{
+                          "component": "collection",
+                          "props": {
+                              "className": "header-left-content",
+                              "items": [
+                                  {
+                                    "component": "button",
+                                    "props": {
+                                        "style": {},
+                                        "text": "",
+                                        "action": "Route_home",
+                                        "className": "menu_btn home_btn",
+                                        "icon": "Group%2053.png"
+                                    }
+                                }
+                              ]
+                          }
+                      },
+                      {
+                          "component": "collection",
+                          "props": {
+                              "className": "header-middle-content",
+                              "items": [
+
+                                {
+                                  "component": "button",
+                                  "props": {
+                                      "style": {},
+                                      "text": "",
+                                      "action": "",
+                                      "className": "menu_btn home_btn",
+                                      "icon": ""
+                                  }
+                              }
+                              ]
+                          }
+                      },
+                      {
+                          "component": "collection",
+                          "props": {
+                              "className": "header-right-content",
+                              "items": [
+                                {
+                                  "component": "button",
+                                  "props": {
+                                      "style": {},
+                                      "text": "",
+                                      "action": "Route_search",
+                                      "className": "menu_btn",
+                                      "icon": "magnifier-tool.png"
+                                  }
+                                },
+                                  {
+                                      "component": "button",
+                                      "props": {
+                                          "style": {},
+                                          "text": "${epg}",
+                                          "day": "0",
+                                          "action": "Route_epg/{day}",
+                                          "className": "menu_btn epg_btn"
+                                      }
+                                  },
+                                  {
+                                      "component": "button",
+                                      "props": {
+                                          "localText": "${change_language}",
+                                          "style": {},
+                                          "action": "toggleState_showLanguages",
+                                          "className": "menu_btn"
+                                      }
+                                    },
+                                    {
+                                      "component": "collection",
+                                      "props": {
+                                        "role": "dialog",
+                                        "className": "dialog combobox popup",
+                                        "visibileWithState" : "showLanguages",
+                                        "items": [
+                                          {
+                                            "component": "button",
+                                            "props": {
+                                              "style": {},
+                                              "text": "Arabic",
+                                              "id": "Id",
+                                              "action": "changeLocale_ar",
+                                              "className": "combobox-btn"
+                                            }
+                                          },
+                                          {
+                                            "component": "button",
+                                            "props": {
+                                              "style": {},
+                                              "text": "English",
+                                              "id": "Id",
+                                              "action": "changeLocale_en",
+                                              "className": "combobox-btn"
+                                            }
+                                          },
+                                          {
+                                            "component": "button",
+                                            "props": {
+                                              "style": {},
+                                              "text": "Bengali",
+                                              "id": "Id",
+                                              "action": "changeLocale_bn",
+                                              "className": "combobox-btn"
+                                            }
+                                          }
+                                            
+                                        ],
+                                        "focus" : {
+                                          "up": {
+                                              "nextFocusabledItemClassSelector": "up"
+                                          },
+                                          "down": {
+                                            "nextFocusabledItemClassSelector": "down"
+                                          },
+                                          "left" : {
+                                              "nextFocusabledItemClassSelector": "none"
+                                          },
+                                          "right": {
+                                              "nextFocusabledItemClassSelector": "none"
+                                          }
+                                        }
+                                      }                
+                                  }
+                              ]
+                          }
+                      }]
+                  }
+              },
+              {
+                  "_comments": "Tab component",
+                  "component": "tab",
+                  "props": {
+                      "className": "tab",
+                      "style": {
+                          "width": "100%"
+                      },
+                      "selectedId" : "1",
+                      "buttons":[
+                          {
+                              "component": "button",
+                              "props": {
+                                  "style": {},
+                                  "text": "${home}",
+                                  "id" : "1",
+                                  "className": "footer_btn",
+                                  "icon": "Group%2034.png",
+                                  "selectedIcon": "home_selected.png"
+                              }
+                          },
+                          {
+                              "component": "button",
+                              "props": {
+                                  "style": {},
+                                  "text": "${my_list}",
+                                  "id" : "2",
+                                  "className": "footer_btn",
+                                  "icon": "Group%2035.png",
+                                  "selectedIcon": "Group%2027.png"
+                              }
+                          },
+                          {
+                              "component": "button",
+                              "props": {
+                                  "style": {},
+                                  "text": "${account}",
+                                  "id" : "3",
+                                  "className": "footer_btn",
+                                  "icon": "Group%2039.png",
+                                  "selectedIcon": "Group%2044.png"
+                              }
+                          },
+                          {
+                              "component": "button",
+                              "props": {
+                                  "style": {},
+                                  "text": "${cc}",
+                                  "id" : "4",
+                                  "action": "Open_portal.html",
+                                  "className": "footer_btn",
+                                  "icon": "Group%2036.png",
+                                  "selectedIcon": "Group%2030.png"
+                              }
+                          }
+                      ],
+                      "items": [
+                          {
+                              "component": "collection",
+                              "props": {
+                                  "className": "",
+                                  "id" : "1",
+                                  "items": [
+                                    {
+                                      "_comments": "List component",
+                                      "component": "collection",
+                                      "props": {
+                                        "className": "search-list-container",
+                                        "style": {
+                                          "width": "100%"
+                                        },
+                                        "items": [
+                                          {
+                                            "component": "search_bar",
+                                            "props": {
+                                              "searchRequestDelay": 2000,
+                                              "showSuggetionBox": false,
+                                              "showSuggetionGrid": true,
+                                              "showSoftKeyboard": false,
+                                              "softKeyboardOptions": {
+                                                "comment": "available keyboard types: custom, qwerty, abc",
+                                                "keyboardType": "qwerty",
+                                                "width": "50",
+                                                "margin": "2"
+                                              },
+                                              "itemPath": "data.data",
+                                              "title": "v_title",
+                                              "v_id": "v_id",
+                                              "action": "Route_player/program/{v_id}/{v_id}",
+                                              "items": [
+                                                {
+                                                  "_comments": "List Bucket Items",
+                                                  "component": "list",
+                                                  "name": "videoList",
+                                                  "props": {
+                                                    "style": {},
+                                                    "className": "homeList",
+                                                    "name": "videoList_list2",
+                                                    "_comment": "this search result list",
+                                                    "horizontal": true,
+                                                    "circular": false,
+                                                    "grid": true,
+                                                    "isCarousel": false,
+                                                    "items": "data",
+                                                    "itemTitle": "",
+                                                    "viewMore": false,
+                                                    "type": "video"
+                                                  },
+                                                  "dataURL": "searchURL",
+                                                  "itemRenderer": [
+                                                    {
+                                                      "component": "thumbnail",
+                                                      "props": {
+                                                        "name": "videoList_list2_image",
+                                                        "src": "imagery.mobile_img",
+                                                        "fallbackSrc": "background.png",
+                                                        "hideFallback": true,
+                                                        "showArrow": false,
+                                                        "cardOverlay": false,
+                                                        "videoId": "id",
+                                                        "contentId": "id",
+                                                        "type": "content_type",
+                                                        "synopsis": "v_short_desc",
+                                                        "title": "v_title",
+                                                        "rating": "2.5",
+                                                        "src_backdrop": "v_extralarge_image",
+                                                        "clickable": true,
+                                                        "style": {
+                                                          "width": "100%"
+                                                        },
+                                                        "className": "list-item",
+                                                        "action": "Route_details/{type}/{contentId}"
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                              }
+                          },
+                          {
+                              "component": "collection",
+                              "props": {
+                                  "className": "",
+                                  "id" : "2",
+                                  "items": [
+                                      {
+                                          "component": "label",
+                                          "props": {
+                                              "text": "${categories}",
+                                              "style": {},
+                                              "className": "category-label"
+                                          }
+                                        },
+                                        {
+                                            "_comments": "List Bucket Items",
+                                            "component": "list",
+                                            "name": "homePageList",
+                                            "props": {
+                                                "horizontal": false,
+                                                "style": {},
+                                                "items": "data.playlists"
+                                            },
+                                            "dataURL": "homePageList",
+                                            "itemRenderer": [{
+                                                "component": "list",
+                                                "props": {
+                                                    "style": {},
+                                                    "_comment": "this is carousel",
+                                                    "horizontal": true,
+                                                    "circular": true,
+                                                    "isCarousel": false,                            
+                                                    "hideArrows": true,
+                                                    "items": "content",
+                                                    "itemTitle": "title",
+                                                    "itemId" : "id",
+                                                    "viewMore": true,
+                                                    "viewMoreText": "View all",
+                                                    "localViewMoreText": "view_all",
+                                                    "action": "Route_viewall/{itemId}"
+                                                },
+                                                "itemRenderer": [{
+                                                    "component": "image",
+                                                    "props": {
+                                                        "hideFallback": true,
+                                                        "src": "imagery.thumbnail",
+                                                        "imageDimension": "?d=200X200",
+                                                        "videoId": "id",
+                                                        "type": "content_type",
+                                                        "clickable": true,
+                                                        "showPlayIcon": false,
+                                                        "style": {
+                                                            "width": "100%"
+                                                        },
+                                                        "className": "swiper-item--image",
+                                                        "videoPlayerId": "video_id",
+                                                        "contentId": "id",
+                                                        "action": "Route_player/{type}/{videoId}/{videoPlayerId}"
+                                                    }
+                                                }]
+                                            }]
+                                        }
+                                  ]
+                              }
+                          },
+                          {
+                              "component": "collection",
+                              "props": {
+                                  "className": "",
+                                  "id" : "3",
+                                  "items": [
+                                      {
+                                          "component": "collection",
+                                          "props": {
+                                              "className": "my-profile-content",
+                                              "items": [
+                                                  {
+                                                      "component": "collection",
+                                                      "props": {
+                                                          "className": "content-name",
+                                                          "items": [
+                                                              {
+                                                                "component": "label",
+                                                                "props": {
+                                                                    "style": {},
+                                                                    "text": "${name} :",
+                                                                    "className": "name"
+                                                                  }
+                                                              },
+                                                              {
+                                                                  "component": "label",
+                                                                  "props": {
+                                                                      "style": {},
+                                                                      "text": "ABC XYZ", 
+                                                                      "className": "name"
+                                                                  }
+                                                              }
+                                                          ]
+                                                      }
+                                                  },
+                                                  {
+                                                      "component": "collection",
+                                                      "props": {
+                                                          "className": "content-email",
+                                                          "items": [
+                                                              {
+                                                                "component": "label",
+                                                                "props": {
+                                                                    "style": {},
+                                                                    "text": "Email: ",
+                                                                    "localText": "${email} :", 
+                                                                    "className": "email"
+                                                                  }
+                                                              },
+                                                              {
+                                                                  "component": "label",
+                                                                  "props": {
+                                                                      "style": {},
+                                                                      "text": "xyzo@ltts.com", 
+                                                                      "className": "email"
+                                                                  }
+                                                              }
+                                                          ]
+                                                      }
+                                                  },
+                                                  {
+                                                      "component": "collection",
+                                                      "props": {
+                                                          "className": "content-email",
+                                                          "items": [
+                                                              {
+                                                                "component": "label",
+                                                                "props": {
+                                                                    "style": {},
+                                                                    "text": "Mobile: ", 
+                                                                    "localText": "${mobile} :",
+                                                                    "className": "email"
+                                                                  }
+                                                              },
+                                                              {
+                                                                  "component": "label",
+                                                                  "props": {
+                                                                      "style": {},
+                                                                      "text": "1234567842", 
+                                                                      "className": "email"
+                                                                  }
+                                                              }
+                                                          ]
+                                                      }
+                                                  }
+                                              ]
+                                          }
+                                      }
+                                  ]
+                              }
+                          },
+                          {
+                              "component": "collection",
+                              "props": {
+                                  "className": "",
+                                  "id" : "4",
+                                  "items": [
+                                      {
+                                          "component": "label",
+                                          "props": {
+                                              "style": {},
+                                              "text": "Control",
+                                              "className": "footer_btn",
+                                              "icon": "Group%2034.png",
+                                              "selectedIcon": "home_selected.png"
+                                          }
+                                      }
+                                  ]
+                              }
+                          }
+                      ]
+                  }
+              }
+          ]
+      }
+  },
+  "theme": {},
+  "components": {}
+}

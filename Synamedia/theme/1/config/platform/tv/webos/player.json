@@ -1,0 +1,71 @@
+{
+  "id": "player",
+  "layout": {
+    "_comments": "Player Page",
+    "component": "collection",
+    "props": {
+      "className": "player-details",
+      "items": [
+        {
+          "component": "video",
+          "props": {
+            "playerType": "videojs",
+            "mediaSource": "url_video",
+            "controlBar": {
+              "type": "custom",
+              "autoHide": "500000000",
+              "layout": {
+                "row1": {
+                  "buttons": [
+                    { "type": "play-pause", "style": { "width": "3%" } },
+                    { "type": "mute", "style": { "width": "1.5%" } },
+                    {
+                      "type": "volume-bar",
+                      "style": { "width": "5%", "height": "5px", "margin-right": "50px" }
+                    },
+                    {
+                      "type": "progress-bar",
+                      "style": {
+                        "width": "65%",
+                        "marginLeft": "10px",
+                        "marginRight": "10px",
+                        "height": "10px"
+                      }
+                    },
+                    {
+                      "type": "current-time",
+                      "separator": " / ",
+                      "style": { "width": "7%" }
+                    },
+                    { "type": "fullscreen", "style": { "width": "4%", "text-align": "right" } }
+                  ],
+                  "style": {
+                    "height": "100%",
+                    "display": "flex",
+                    "justify-content": "center",
+                    "align-items": "center"
+                  }
+                }
+              },
+              "style": {
+                "height": "170px",
+                "width": "100%",
+                "bottom": "0",
+                "backgroundColor": "rgba(0,0,0,0.8)",
+                "color": "white"
+              }
+            },
+            "autoPlay": true,
+            "style": {
+              "width": "100%"
+            }
+          },
+          "dataURL": "playURL",
+          "name": "playURL"
+        }
+      ]
+    }
+  },
+  "theme": {},
+  "components": {}
+}

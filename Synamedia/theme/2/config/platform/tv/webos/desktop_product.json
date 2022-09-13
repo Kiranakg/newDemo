@@ -1,0 +1,226 @@
+{
+    "id": "landing",
+    "layout": {
+        "_comments": "Layout",
+        "component": "collection",
+        "props": {
+            "className":"home_main desktop",
+            "name" : "Root Collection",
+            "items": [{
+                    "_comments": "Header component",
+                    "component": "collection",
+                    "stateObject": {
+                        "showLanguages": false
+                    },
+                    "props": {
+                        "className": "header",
+                        "style": {
+                            "width": "100%"
+                        },
+                        "items": [{
+                            "component": "collection",
+                            "props": {
+                                "className": "header-left-content",
+                                "items": [
+                                    {
+                                        "component": "button",
+                                        "props": {
+                                            "style": {},
+                                            "text": "Home",
+                                            "localText": "${home}",
+                                            "action": "Route_home",
+                                            "className": "menu_btn home_btn",
+                                            "icon": "Group%2053.png"
+                                        }
+                                    },
+                                    {
+                                        "component": "button",
+                                        "props": {
+                                            "style": {},
+                                            "text": "Shows",
+                                            "type": "shows",
+                                            "id": "114",
+                                            "action": "Route_menu/{type}/{id}",
+                                            "className": "menu_btn"
+                                        }
+                                    },
+                                    {
+                                        "component": "button",
+                                        "props": {
+                                            "style": {},
+                                            "text": "Movies",
+                                            "type": "movies",
+                                            "id": "119",
+                                            "action": "Route_menu/{type}/{id}",
+                                            "className": "menu_btn"
+                                        }
+                                    },
+                                    {
+                                        "component": "button",
+                                        "props": {
+                                            "style": {},
+                                            "text": "Series",
+                                            "type": "series",
+                                            "id": "115",
+                                            "action": "Route_menu/{type}/{id}",
+                                            "className": "menu_btn"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "component": "collection",
+                            "props": {
+                                "className": "header-right-content",
+                                "items": [
+                                    {
+                                        "component": "button",
+                                        "props": {
+                                            "style": {},
+                                            "text": "Arabic",
+                                            "type": "arabic",
+                                            "id": "118",
+                                            "action": "Route_menu/{type}/{id}",
+                                            "className": "menu_btn"
+                                        }
+                                    },
+                                    {
+                                        "component": "button",
+                                        "props": {
+                                            "style": {},
+                                            "text": "EPG",
+                                            "day": "0",
+                                            "action": "Route_epg/{day}",
+                                            "className": "menu_btn"
+                                        }
+                                    },
+                                    {
+                                        "component": "button",
+                                        "props": {
+                                            "style": {},
+                                            "text": "Search",
+                                            "action": "Route_search",
+                                            "className": "menu_btn",
+                                            "icon": ""
+                                        }
+                                    },
+                                    {
+                                        "component": "button",
+                                        "props": {
+                                            "localText": "${change_language}",
+                                            "style": {},
+                                            "action": "toggleState_showLanguages",
+                                            "className": "menu_btn combo-btn"
+                                        }
+                                    },
+                                    {
+                                        "component": "collection",
+                                        "props": {
+                                            "role": "dialog",
+                                            "className": "dialog combobox popup",
+                                            "visibileWithState" : "showLanguages",
+                                            "items": [
+                                                {
+                                                    "component": "button",
+                                                    "props": {
+                                                        "style": {},
+                                                        "text": "Arabic",
+                                                        "id": "Id",
+                                                        "action": "changeLocale_ar",
+                                                        "className": "combobox-btn"
+                                                    }
+                                                },
+                                                {
+                                                    "component": "button",
+                                                    "props": {
+                                                        "style": {},
+                                                        "text": "English",
+                                                        "id": "Id",
+                                                        "action": "changeLocale_en",
+                                                        "className": "combobox-btn"
+                                                    }
+                                                },
+                                                {
+                                                    "component": "button",
+                                                    "props": {
+                                                        "style": {},
+                                                        "text": "Bengali",
+                                                        "id": "Id",
+                                                        "action": "changeLocale_bn",
+                                                        "className": "combobox-btn"
+                                                    }
+                                                }
+
+                                            ],
+                                            "focus" : {
+                                                "up": {
+                                                    "nextFocusabledItemClassSelector": "up"
+                                                },
+                                                "down": {
+                                                    "nextFocusabledItemClassSelector": "down"
+                                                },
+                                                "left" : {
+                                                    "nextFocusabledItemClassSelector": "none"
+                                                },
+                                                "right": {
+                                                    "nextFocusabledItemClassSelector": "none"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }]
+                    }
+                },
+                {
+                    "_comments": "List Bucket Items",
+                    "component": "list",
+                    "name": "homePageList",
+                    "props": {
+                        "horizontal": false,
+                        "style": {},
+                        "items": "data.playlists",
+                        "className": "home_list"
+                    },
+                    "dataURL": "homePageList",
+                    "itemRenderer": [{
+                        "component": "list",
+                        "props": {
+                            "style": {},
+                            "_comment": "this is carousel",
+                            "horizontal": true,
+                            "circular": true,
+                            "isCarousel": false,
+                            "items": "content",
+                            "itemTitle": "title"
+                        },
+                        "itemRenderer": [{
+                            "component": "thumbnail",
+                            "props": {
+                                "src": "imagery.thumbnail",
+                                "fallbackSrc": "default.png",
+                                "hideFallback": true,
+                                "imageDimension": "?d=200X200",
+                                "type": "content_type",
+                                "synopsis": "synopsis",
+                                "title": "title",
+                                "src_backdrop": "imagery.backdrop",
+                                "clickable": true,
+                                "style": {
+                                    "width": "100%"
+                                },
+                                "id": "id",
+                                "className": "swiper-item--image",
+                                "action": "Route_details/{type}/{id}"
+                            }
+                        }]
+                    }]
+                }
+            ]
+        }
+    },
+    "theme": {},
+    "components": {}
+}

@@ -1,0 +1,588 @@
+{
+  "id": "player",
+  "layout": {
+    "_comments": "Layout",
+    "component": "collection",
+    "props": {
+      "className": "player-mobile-product",
+      "style": { "width": "100%" },
+      "items": [
+        {
+          "_comments": "Header component",
+          "component": "collection",
+          "stateObject": {
+            "showLanguages": false
+          },
+          "props": {
+            "className": "header",
+            "style": {
+              "width": "100%"
+            },
+            "items": [
+              {
+                "component": "collection",
+                "props": {
+                  "className": "header-left-content",
+                  "items": [
+                    {
+                      "component": "button",
+                      "props": {
+                        "style": {},
+                        "text": "",
+                        "action": "Route_home",
+                        "className": "menu_btn home_btn",
+                        "icon": "Group%2053.png"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "component": "collection",
+                "props": {
+                  "className": "header-right-content",
+                  "items": [
+                    {
+                      "component": "button",
+                      "props": {
+                        "localText": "${epg}",
+                        "style": {},
+                        "day": "0",
+                        "action": "Route_epg/{day}",
+                        "className": "menu_btn epg_btn"
+                      }
+                    },
+                    {
+                      "component": "button",
+                      "props": {
+                        "style": {},
+                        "action": "toggleState_showLanguages",
+                        "className": "menu_btn combo-btn",
+                        "icon": "translate.png"
+                      }
+                    },
+                    {
+                      "component": "collection",
+                      "props": {
+                        "role": "dialog",
+                        "className": "dialog combobox popup",
+                        "visibileWithState": "showLanguages",
+                        "items": [
+                          {
+                            "component": "button",
+                            "props": {
+                              "style": {},
+                              "text": "Arabic",
+                              "id": "Id",
+                              "action": "changeLocale_ar",
+                              "className": "combobox-btn"
+                            }
+                          },
+                          {
+                            "component": "button",
+                            "props": {
+                              "style": {},
+                              "text": "English",
+                              "id": "Id",
+                              "action": "changeLocale_en",
+                              "className": "combobox-btn"
+                            }
+                          },
+                          {
+                            "component": "button",
+                            "props": {
+                              "style": {},
+                              "text": "Bengali",
+                              "id": "Id",
+                              "action": "changeLocale_bn",
+                              "className": "combobox-btn"
+                            }
+                          }
+                        ],
+                        "focus": {
+                          "up": {
+                            "nextFocusabledItemClassSelector": "up"
+                          },
+                          "down": {
+                            "nextFocusabledItemClassSelector": "down"
+                          },
+                          "left": {
+                            "nextFocusabledItemClassSelector": "none"
+                          },
+                          "right": {
+                            "nextFocusabledItemClassSelector": "none"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "_comments": "Tab component",
+          "component": "tab",
+          "props": {
+            "className": "tab",
+            "style": {
+              "width": "100%"
+            },
+            "selectedId": "1",
+            "buttons": [
+              {
+                "component": "button",
+                "props": {
+                  "style": {},
+                  "text": "${home}",
+                  "id": "1",
+                  "className": "footer_btn",
+                  "icon": "Group%2034.png",
+                  "selectedIcon": "home_selected.png"
+                }
+              },
+              {
+                "component": "button",
+                "props": {
+                  "style": {},
+                  "text": "${my_list}",
+                  "id": "2",
+                  "className": "footer_btn",
+                  "icon": "Group%2035.png",
+                  "selectedIcon": "Group%2027.png"
+                }
+              },
+              {
+                "component": "button",
+                "props": {
+                  "style": {},
+                  "text": "${account}",
+                  "id": "3",
+                  "className": "footer_btn",
+                  "icon": "Group%2039.png",
+                  "selectedIcon": "Group%2044.png"
+                }
+              },
+              {
+                "component": "button",
+                "props": {
+                  "style": {},
+                  "text": "${cc}",
+                  "id": "4",
+                  "action": "Open_portal.html",
+                  "className": "footer_btn",
+                  "icon": "Group%2036.png",
+                  "selectedIcon": "Group%2030.png"
+                }
+              }
+            ],
+            "items": [
+              {
+                "component": "collection",
+                "props": {
+                  "className": "",
+                  "id": "1",
+                  "items": [
+                    {
+                      "component": "video",
+                      "props": {
+                        "playerType": "videojs",
+                        "adUrl": "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpost&cmsid=496&vid=short_onecue&correlator=",
+                        "mediaSource": "url_video",
+                        "autoPlay": true,
+                        "controls": true,
+                        "style": {
+                          "width": "100%",
+                          "height": "äuto"
+                        },
+                        "controlBar": {
+                          "type": "custom",
+                          "autoHide": "5",
+                          "layout": {
+                            "row1": {
+                              "buttons": [
+                                { "type": "play-pause", "style": { "width": "3%" } },
+                                { "type": "mute", "style": { "width": "1.5%" } },
+                                {
+                                  "type": "volume-bar",
+                                  "style": { "width": "5%", "height": "5px", "margin-right": "20px" }
+                                },
+                                {
+                                  "type": "progress-bar",
+                                  "style": {
+                                    "width": "75%",
+                                    "marginLeft": "10px",
+                                    "marginRight": "10px",
+                                    "height": "5px"
+                                  }
+                                },
+                                { "type": "fullscreen", "style": { "width": "4%", "text-align": "right" } }
+                              ],
+                              "style": {
+                                "height": "100%",
+                                "display": "flex",
+                                "justify-content": "center",
+                                "align-items": "center",
+                                "margin": "0 10px"
+                              }
+                            }
+                          },
+                          "style": {
+                            "height": "60px",
+                            "width": "100%",
+                            "bottom": "0",
+                            "backgroundColor": "rgba(0,0,0,0.5)",
+                            "color": "white"
+                          }
+                        }
+                      },
+                      "dataURL": "playURL",
+                      "name": "playURL"
+                    },
+                    {
+                      "component": "button",
+                      "props": {
+                        "hideFallback": true,
+                        "text": "Back",
+                        "className": "btn-back",
+                        "clickable": true,
+                        "action": "Route_landing"
+                      }
+                    },
+                    {
+                      "component": "list",
+                      "name": "playbackItemDetails",
+                      "props": {
+                        "className": "content-details",
+                        "items": "data",
+                        "horizontal": true,
+                        "scrollable": false
+                      },
+                      "dataURL": "playbackItemDetails",
+                      "itemRenderer": [
+                        {
+                          "component": "collection",
+                          "props": {
+                            "className": "details",
+                            "items": [
+                              {
+                                "component": "collection",
+                                "props": {
+                                  "className": "play-title",
+                                  "items": [
+                                    {
+                                      "component": "label",
+                                      "props": {
+                                        "text": "title",
+                                        "className": "content-title"
+                                      }
+                                    },
+                                    {
+                                      "component": "collection",
+                                      "props": {
+                                        "className": "rating",
+                                        "items": [
+                                          {
+                                            "component": "label",
+                                            "props": {
+                                              "text": "production_year",
+                                              "className": "content-data"
+                                            }
+                                          },
+                                          {
+                                            "component": "label",
+                                            "props": {
+                                              "text": "age_rating",
+                                              "className": "content-data"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "component": "collection",
+                                "props": {
+                                  "className": "rating",
+                                  "items": [
+                                    {
+                                      "component": "label",
+                                      "props": {
+                                        "text": "genres",
+                                        "className": "content-data"
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "component": "collection",
+                                "props": {
+                                  "className": "details_left",
+                                  "items": [
+                                    {
+                                      "component": "label",
+                                      "props": {
+                                        "text": "synopsis",
+                                        "className": "content-data"
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "component": "label",
+                                "props": {
+                                  "text": "Similar Programs",
+                                  "className": "similar_contents content-details"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "component": "list",
+                      "name": "similarPlayList",
+                      "props": {
+                        "style": {},
+                        "_comment": "player related bucket",
+                        "className": "content-details",
+                        "horizontal": true,
+                        "circular": false,
+                        "isCarousel": false,
+                        "items": "data"
+                      },
+                      "dataURL": "similarPlayList",
+                      "itemRenderer": [
+                        {
+                          "component": "collection",
+                          "props": {
+                            "className": "title-section",
+                            "items": [
+                              {
+                                "component": "image",
+                                "props": {
+                                  "hideFallback": true,
+                                  "forceReload": true,
+                                  "src": "imagery.thumbnail",
+                                  "imageDimension": "?d=200X200",
+                                  "contentType": "content_type",
+                                  "contentId": "id",
+                                  "videoId": "video_id",
+                                  "clickable": true,
+                                  "style": {
+                                    "width": "100%"
+                                  },
+                                  "action": "Route_player/{contentType}/{contentId}/{videoId}"
+                                }
+                              },
+                              {
+                                "component": "collection",
+                                "props": {
+                                  "className": "detail-item-data",
+                                  "items": [
+                                    {
+                                      "component": "label",
+                                      "props": {
+                                        "text": "title",
+                                        "className": "title"
+                                      }
+                                    },
+                                    {
+                                      "component": "label",
+                                      "props": {
+                                        "text": "synopsis",
+                                        "className": "content-data"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "component": "collection",
+                "props": {
+                  "className": "",
+                  "id": "2",
+                  "items": [
+                    {
+                      "_comments": "List Bucket Items",
+                      "component": "list",
+                      "name": "showsList",
+                      "props": {
+                          "horizontal": false,
+                          "style": {},
+                          "items": "data.playlists"
+                      },
+                      "dataURL": "showsList",
+                      "itemRenderer": [{
+                          "component": "list",
+                          "props": {
+                              "style": {},
+                              "_comment": "this is carousel",
+                              "horizontal": true,
+                              "circular": true,
+                              "isCarousel": false,
+                              "hideArrows": true,
+                              "items": "content",
+                              "itemTitle": "title",
+                              "itemId" : "id",
+                              "viewMore": true,
+                              "viewMoreText": "View all",
+                              "action": "Route_viewall/{itemId}"
+                          },
+                          "itemRenderer": [{
+                              "component": "image",
+                              "props": {
+                                  "hideFallback": true,
+                                  "src": "imagery.thumbnail",
+                                  "imageDimension": "?d=200X200",
+                                  "videoId": "id",
+                                  "type": "content_type",
+                                  "clickable": true,
+                                  "showPlayIcon": false,
+                                  "style": {
+                                      "width": "100%"
+                                  },
+                                  "className": "swiper-item--image",
+                                  "videoPlayerId": "video_id",
+                                  "contentId": "id",
+                                  "action": "Route_player/{type}/{videoId}/{videoPlayerId}"
+                              }
+                          }]
+                      }]
+                    }
+                  ]
+                }
+              },
+              {
+                "component": "collection",
+                "props": {
+                  "className": "",
+                  "id": "3",
+                  "items": [
+                    {
+                      "component": "collection",
+                      "props": {
+                          "className": "my-profile-content",
+                          "items": [
+                              {
+                                  "component": "collection",
+                                  "props": {
+                                      "className": "content-name",
+                                      "items": [
+                                          {
+                                            "component": "label",
+                                            "props": {
+                                                "style": {},
+                                                "text": "${name} :",
+                                                "className": "name"
+                                              }
+                                          },
+                                          {
+                                              "component": "label",
+                                              "props": {
+                                                  "style": {},
+                                                  "text": "ABC XYZ",
+                                                  "className": "name"
+                                              }
+                                          }
+                                      ]
+                                  }
+                              },
+                              {
+                                  "component": "collection",
+                                  "props": {
+                                      "className": "content-email",
+                                      "items": [
+                                          {
+                                            "component": "label",
+                                            "props": {
+                                                "style": {},
+                                                "text": "Email: ",
+                                                "localText": "${email} :",
+                                                "className": "email"
+                                              }
+                                          },
+                                          {
+                                              "component": "label",
+                                              "props": {
+                                                  "style": {},
+                                                  "text": "xyzo@ltts.com",
+                                                  "className": "email"
+                                              }
+                                          }
+                                      ]
+                                  }
+                              },
+                              {
+                                  "component": "collection",
+                                  "props": {
+                                      "className": "content-email",
+                                      "items": [
+                                          {
+                                            "component": "label",
+                                            "props": {
+                                                "style": {},
+                                                "text": "Mobile: ",
+                                                "localText": "${mobile} :",
+                                                "className": "email"
+                                              }
+                                          },
+                                          {
+                                              "component": "label",
+                                              "props": {
+                                                  "style": {},
+                                                  "text": "1234567842",
+                                                  "className": "email"
+                                              }
+                                          }
+                                      ]
+                                  }
+                              }
+                          ]
+                      }
+                  }
+                  ]
+                }
+              },
+              {
+                "component": "collection",
+                "props": {
+                  "className": "",
+                  "id": "4",
+                  "items": [
+                    {
+                      "component": "label",
+                      "props": {
+                        "style": {},
+                        "text": "Control",
+                        "className": "footer_btn",
+                        "icon": "Group%2034.png",
+                        "selectedIcon": "home_selected.png"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "theme": {},
+  "components": {}
+}

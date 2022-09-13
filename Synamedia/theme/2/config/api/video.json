@@ -1,0 +1,10 @@
+{
+  "data": [
+    {
+      "video": {
+        "src": "http://www.example.com/path/to/video.mp4",
+        "poster": "http://www.example.com/path/to/video_poster.jpg"
+      }
+    }
+  ]
+}

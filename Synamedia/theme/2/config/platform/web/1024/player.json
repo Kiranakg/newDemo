@@ -1,0 +1,73 @@
+{
+  "id": "player",
+  "layout": {
+    "_comments": "Player Page",
+    "component": "collection",
+    "props": {
+      "className": "player-details",
+      "items": [
+        {
+          "component": "video",
+          "props": {
+            "playerType": "videojs",
+            "adUrl": "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpost&cmsid=496&vid=short_onecue&correlator=",
+            "mediaSource": "url_video",
+            "controlBar": {
+              "type": "custom",
+              "autoHide": "5",
+              "layout": {
+                "row1": {
+                  "buttons": [
+                    { "type": "play-pause", "style": { "width": "4%" } },
+                    { "type": "mute", "style": { "width": "1.5%" } },
+                    {
+                      "type": "volume-bar",
+                      "style": { "width": "8%", "height": "5px", "margin-right": "20px" }
+                    },
+                    {
+                      "type": "progress-bar",
+                      "style": {
+                        "width": "60%",
+                        "marginLeft": "10px",
+                        "marginRight": "10px",
+                        "height": "5px"
+                      }
+                    },
+                    {
+                      "type": "current-time",
+                      "separator": " / ",
+                      "style": { "width": "10%" }
+                    },
+                    { "type": "fullscreen", "style": { "width": "4%", "text-align": "right" } }
+                  ],
+                  "style": {
+                    "height": "100%",
+                    "display": "flex",
+                    "justify-content": "center",
+                    "align-items": "center"
+                  }
+                }
+              },
+              "style": {
+                "height": "70px",
+                "width": "100%",
+                "bottom": "0",
+                "backgroundColor": "rgba(0,0,0,0)",
+                "color": "white"
+              }
+            },
+            "autoPlay": true,
+            "style": {
+              "width": "100%"
+            },
+            "afterPlaybackCompleted": "goBack"
+          },
+          "dataURL": "playURL",
+          "name": "playURL"
+        }
+      ]
+    }
+  },
+  "theme": {},
+  "components": {}
+}

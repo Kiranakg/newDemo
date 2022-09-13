@@ -1,0 +1,229 @@
+{
+  "id": "Guide",
+  "layout": {
+    "_comments": "Layout",
+    "component": "epg",
+    "props": {
+      "className": "epg_main desktop",
+      "name": "Root epg",
+      "items": [
+        {
+          "_comments": "tvGuide grid component",
+          "component": "epg",
+          "props": {
+            "navigation": "center",
+            "className": "tv-guide",
+            "past": 2,
+            "future": 1,
+            "eventLength": 250,
+            "day": 0,
+            "daysAction": "Route_epg/{day}",
+            "style": {
+              "width": "100%"
+            },
+            "items": [
+              {
+                "_comments": "Channel bar",
+                "component": "list",
+                "name": "channelBar",
+                "props": {
+                  "disableHeader": true,
+                  "useIScroll": true,
+                  "showLoader": false,
+                  "iScrollID": "channellist",
+                  "scrollSync": {
+                    "vertical": [ "eventschannellist" ],
+                    "horizontal": []
+                  },
+                  "iScrollOptions": {
+                    "mouseWheel": true,
+                    "scrollbars": false,
+                    "scrollY": true,
+                    "momentum": false,
+                    "probeType": 3
+                  },
+                  "iScrollWrapperStyle": {
+                    "height": "calc(100vh - 150px)"
+                  },
+                  "iScrollContainerStyle": {},
+                  "horizontal": false,
+                  "circular": false,
+                  "isCarousel": false,
+                  "style": {},
+                  "items": "items",
+                  "className": "channel-bar"
+                },
+                "dataURL": "channelBar",
+                "itemRenderer": [
+                  {
+                    "component": "button",
+                    "props": {
+                      "action": "",
+                      "style": {},
+                      "img": "icon",
+                      "className": "guide-channel"
+                    }
+                  }
+                ]
+              },
+              {
+                "component": "epg",
+                "props": {
+                  "className": "epg-program-grid",
+                  "eventLength": 250,
+                  "navigation": "center",
+                  "items": [
+                    {
+                      "_comments": "Time bar",
+                      "component": "list",
+                      "name": "timeBar",
+                      "props": {
+                        "disableHeader": true,
+                        "useIScroll": true,
+                        "showLoader": false,
+                        "iScrollID": "timebar",
+                        "scrollSync": {
+                          "vertical": [],
+                          "horizontal": [ "eventlist" ]
+                        },
+                        "livePointer": "true",
+                        "eventLength": 250,
+                        "iScrollOptions": {
+                          "mouseWheel": false,
+                          "scrollbars": false,
+                          "scrollX": true,
+                          "scrollY": true,
+                          "momentum": false,
+                          "probeType": 3
+                        },
+                        "iScrollWrapperStyle": {
+                          "height": "65px",
+                          "width": "calc(100vw - 250px)"
+                        },
+                        "iScrollContainerStyle": {
+                          "width": "6000px"
+                        },
+                        "horizontal": true,
+                        "circular": false,
+                        "isCarousel": false,
+                        "style": {
+                          "width": "1000px"
+                        },
+                        "items": "data",
+                        "className": "time-bar"
+                      },
+                      "dataURL": "timeBar",
+                      "itemRenderer": [
+                        {
+                          "component": "button",
+                          "props": {
+                            "action": "",
+                            "style": {},
+                            "text": "time",
+                            "className": "guide-time"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "_comments": "Program list",
+                "component": "list",
+                "name": "channelList",
+                "props": {
+                  "disableHeader": true,
+                  "useIScroll": true,
+                  "showLoader": false,
+                  "iScrollID": "eventschannellist",
+                  "scrollSync": {
+                    "vertical": [ "channellist" ],
+                    "horizontal": []
+                  },
+                  "iScrollOptions": {
+                    "mouseWheel": true,
+                    "scrollbars": false,
+                    "scrollY": true,
+                    "momentum": false,
+                    "probeType": 3
+                  },
+                  "iScrollWrapperStyle": {
+                    "position": "absolute",
+                    "left": "250px",
+                    "width": "calc(100vw - 250px)",
+                    "height": "calc(100vh - 150px)"
+                  },
+                  "individualItemHeight": 65,
+                  "iScrollContainerStyle": {},
+                  "horizontal": false,
+                  "style": {
+                    "position": "absolute"
+                  },
+                  "items": "data",
+                  "className": "program-bar"
+                },
+                "dataURL": "channelList",
+                "itemRenderer": [
+                  {
+                    "component": "list",
+                    "props": {
+                      "disableHeader": true,
+                      "useIScroll": true,
+                      "showLoader": false,
+                      "iScrollID": "eventlist",
+                      "scrollSync": {
+                        "vertical": [],
+                        "horizontal": [ "timebar", "eventlist" ]
+                      },
+                      "iScrollOptions": {
+                        "mouseWheel": false,
+                        "scrollbars": false,
+                        "scrollX": true,
+                        "momentum": false,
+                        "probeType": 3
+                      },
+                      "iScrollWrapperStyle": {
+                        "height": "65px",
+                        "width": "calc(100vw - 250px)"
+                      },
+                      "iScrollContainerStyle": {
+                        "width": "6000px"
+                      },
+                      "style": {},
+                      "_comment": "this is carousel",
+                      "horizontal": true,
+                      "circular": false,
+                      "isCarousel": false,
+                      "items": "0",
+                      "serviceUrl": "programUrl"
+                    },
+                    "itemRenderer": [
+                      {
+                        "component": "epgItem",
+                        "props": {
+                          "action": "",
+                          "iScrollID": "eventlist",
+                          "itemHeight": 65,
+                          "itemWidth": 250,
+                          "style": {},
+                          "duration": "duration",
+                          "start_time": "start_time",
+                          "end_time": "end_time",
+                          "text": "title",
+                          "className": "guide-program no-cursor first-focus"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "theme": {},
+  "components": {}
+}

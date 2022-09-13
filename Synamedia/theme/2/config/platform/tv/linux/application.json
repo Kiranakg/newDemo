@@ -1,0 +1,44 @@
+{
+  "pages": [
+    {
+      "id": 1,
+      "name": "home",
+      "configPath": "desktop_product.json",
+      "routePath": "/home",
+      "component": "page"
+    },
+    {
+      "id": 2,
+      "name": "details",
+      "configPath": "details.json",
+      "routePath": "/details/:type/:id",
+      "component": "page"
+    },
+    {
+      "id": 3,
+      "name": "player",
+      "configPath": "player.json",
+      "routePath": "/player/:type/:id/:videoId",
+      "component": "page"
+    },
+    {
+      "id": 4,
+      "name": "menu",
+      "configPath": "desktop_menu.json",
+      "routePath": "/menu/:type/:id",
+      "component": "page"
+    },
+    {
+      "id": 5,
+      "name": "epg",
+      "configPath": "desktop_epg.json",
+      "routePath": "/epg/:day",
+      "component": "page"
+    }
+  ],
+  "features": {
+    "keyboard": {
+      "enabled": true
+    }
+  }
+}

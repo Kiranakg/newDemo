@@ -1,0 +1,326 @@
+{
+  "id": "details",
+  "layout": {
+    "_comments": "Layout",
+    "component": "collection",
+    "props": {
+      "className": "player-details",
+      "style": { "width": "100%" },
+      "items": [
+        {
+          "_comments": "Header component",
+          "component": "collection",
+          "stateObject": {
+            "showLanguages": false
+          },
+          "props": {
+            "className": "header",
+            "style": {
+              "width": "100%"
+            },
+            "items": [{
+              "component": "collection",
+              "props": {
+                "className": "header-left-content",
+                "items": [
+                  {
+                    "component": "button",
+                    "props": {
+                      "style": {},
+                      "text": "Home",
+                      "localText": "${home}",
+                      "action": "Route_home",
+                      "className": "menu_btn home_btn",
+                      "icon": "Group%2053.png"
+                    }
+                  },
+                  {
+                    "component": "button",
+                    "props": {
+                      "style": {},
+                      "text": "Shows",
+                      "type": "shows",
+                      "id": "114",
+                      "action": "Route_menu/{type}/{id}",
+                      "className": "menu_btn"
+                    }
+                  },
+                  {
+                    "component": "button",
+                    "props": {
+                      "style": {},
+                      "text": "Movies",
+                      "type": "movies",
+                      "id": "119",
+                      "action": "Route_menu/{type}/{id}",
+                      "className": "menu_btn"
+                    }
+                  },
+                  {
+                    "component": "button",
+                    "props": {
+                      "style": {},
+                      "text": "Series",
+                      "type": "series",
+                      "id": "115",
+                      "action": "Route_menu/{type}/{id}",
+                      "className": "menu_btn"
+                    }
+                  }
+                ]
+              }
+            },
+              {
+                "component": "collection",
+                "props": {
+                  "className": "header-right-content",
+                  "items": [
+                    {
+                      "component": "button",
+                      "props": {
+                        "style": {},
+                        "text": "Arabic",
+                        "type": "arabic",
+                        "id": "118",
+                        "action": "Route_menu/{type}/{id}",
+                        "className": "menu_btn"
+                      }
+                    },
+                    {
+                      "component": "button",
+                      "props": {
+                        "style": {},
+                        "text": "EPG",
+                        "day": "0",
+                        "action": "Route_epg/{day}",
+                        "className": "menu_btn"
+                      }
+                    },
+                    {
+                      "component": "button",
+                      "props": {
+                        "style": {},
+                        "text": "Search",
+                        "action": "Route_search",
+                        "className": "menu_btn",
+                        "icon": ""
+                      }
+                    },
+                    {
+                      "component": "button",
+                      "props": {
+                        "localText": "${change_language}",
+                        "style": {},
+                        "action": "toggleState_showLanguages",
+                        "className": "menu_btn combo-btn"
+                      }
+                    },
+                    {
+                      "component": "collection",
+                      "props": {
+                        "role": "dialog",
+                        "className": "dialog combobox popup",
+                        "visibileWithState" : "showLanguages",
+                        "items": [
+                          {
+                            "component": "button",
+                            "props": {
+                              "style": {},
+                              "text": "Arabic",
+                              "id": "Id",
+                              "action": "changeLocale_ar",
+                              "className": "combobox-btn"
+                            }
+                          },
+                          {
+                            "component": "button",
+                            "props": {
+                              "style": {},
+                              "text": "English",
+                              "id": "Id",
+                              "action": "changeLocale_en",
+                              "className": "combobox-btn"
+                            }
+                          },
+                          {
+                            "component": "button",
+                            "props": {
+                              "style": {},
+                              "text": "Bengali",
+                              "id": "Id",
+                              "action": "changeLocale_bn",
+                              "className": "combobox-btn"
+                            }
+                          }
+
+                        ],
+                        "focus" : {
+                          "up": {
+                            "nextFocusabledItemClassSelector": "up"
+                          },
+                          "down": {
+                            "nextFocusabledItemClassSelector": "down"
+                          },
+                          "left" : {
+                            "nextFocusabledItemClassSelector": "none"
+                          },
+                          "right": {
+                            "nextFocusabledItemClassSelector": "none"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }]
+          }
+        },
+        {
+          "component": "list",
+          "name": "playbackItemDetails",
+          "props": {
+            "className": "content-details",
+            "items": "data",
+            "horizontal": true,
+            "scrollable": false
+          },
+          "dataURL": "playbackItemDetails",
+          "itemRenderer": [
+            {
+              "component": "collection",
+              "props": {
+                "className": "item-details",
+                "items": [
+                  {
+                    "component": "image",
+                    "props": {
+                      "src": "imagery.banner",
+                      "fallbackSrc": "default.png",
+                      "hideFallback": true,
+                      "style": {
+                        "width": "100%",
+                        "height": "640px"
+                      },
+                      "className": "details-background"
+                    }
+                  },
+                  {
+                    "component": "label",
+                    "props": {
+                      "text": "title",
+                      "className": "content-title details-contents"
+                    }
+                  },
+                  {
+                    "component": "label",
+                    "props": {
+                      "text": "synopsis",
+                      "className": "content-data details-contents"
+                    }
+                  },
+                  {
+                    "component": "label",
+                    "props": {
+                      "text": "Genre",
+                      "className": "content-header details-contents"
+                    }
+                  },
+                  {
+                    "component": "label",
+                    "props": {
+                      "text": "genres",
+                      "className": "content-data details-contents"
+                    }
+                  },
+                  {
+                    "component": "label",
+                    "props": {
+                      "text": "Cast",
+                      "className": "content-header details-contents"
+                    }
+                  },
+                  {
+                    "component": "label",
+                    "props": {
+                      "text": "cast",
+                      "className": "content-data details-contents"
+                    }
+                  },
+                  {
+                    "component": "label",
+                    "props": {
+                      "text": "Ratings",
+                      "className": "content-header details-contents"
+                    }
+                  },
+                  {
+                    "component": "label",
+                    "props": {
+                      "text": "age_rating",
+                      "className": "content-data details-contents"
+                    }
+                  },
+                  {
+                    "component": "button",
+                    "props": {
+                      "text": "Play",
+                      "type": "content_type",
+                      "contentId": "id",
+                      "videoId": "video_id||seasons.0.episodes.0.video_id",
+                      "action": "Route_player/{type}/{contentId}/{videoId}",
+                      "className": "details-contents carousel-item--btn play-btn"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "component": "label",
+          "props": {
+            "text": "Similar",
+            "className": "similar_contents content-details"
+          }
+        },
+        {
+          "component": "list",
+          "name": "similarPlayList",
+          "props": {
+            "style": {},
+            "_comment": "player related bucket",
+            "className": "related-items",
+            "horizontal": true,
+            "circular": true,
+            "isCarousel": false,
+            "items": "data"
+          },
+          "dataURL": "similarPlayList",
+          "itemRenderer": [
+            {
+              "component": "image",
+              "props": {
+                "hideFallback": true,
+                "forceReload": true,
+                "src": "imagery.thumbnail",
+                "className": "swiper-item--image",
+                "imageDimension": "?d=200X200",
+                "contentType": "content_type",
+                "synopsis": "synopsis",
+                "title": "title",
+                "videoId": "id",
+                "clickable": true,
+                "style": {
+                  "width": "100%"
+                },
+                "action": "Route_details/{contentType}/{videoId}"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "theme": {},
+  "components": {}
+}

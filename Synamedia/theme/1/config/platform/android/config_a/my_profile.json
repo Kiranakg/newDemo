@@ -1,0 +1,278 @@
+{
+    "id": "myprofile",
+    "layout": {
+      "_comments": "My profile",
+      "component": "collection",
+      "props": {
+        "className":"my_profile_main mobile",
+        "name" : "Root Collection",
+        "items": [
+          {
+            "_comments": "Header component",
+            "component": "collection",
+            "props": {
+                "className": "header",
+                "style": {
+                    "width": "100%"
+                },
+                "items": [{
+                    "component": "collection",
+                    "props": {
+                        "className": "header-left-content",
+                        "items": [
+                            {
+                              "component": "button",
+                              "props": {
+                                  "style": {},
+                                  "text": "",
+                                  "action": "Route_home", 
+                                  "className": "menu_btn home_btn",
+                                  "icon": "Group%2053.png"
+                              }
+                          }
+                        ]
+                    }
+                },
+                {
+                    "component": "collection",
+                    "props": {
+                        "className": "header-middle-content",
+                        "items": [
+                            
+                          {
+                            "component": "button",
+                            "props": {
+                                "style": {},
+                                "text": "",
+                                "action": "",
+                                "className": "menu_btn home_btn",
+                                "icon": ""
+                            }
+                        }
+                        ]
+                    }
+                }]
+            }
+        },
+        {
+            "component": "collection",
+            "props": {
+                "className": "my-profile-content",
+                "items": [
+                    {
+                        "component": "collection",
+                        "props": {
+                            "className": "content-name",
+                            "items": [
+                                {
+                                  "component": "label",
+                                  "props": {
+                                      "style": {},
+                                      "text": "Name: ", 
+                                      "className": "name"
+                                    }
+                                },
+                                {
+                                    "component": "label",
+                                    "props": {
+                                        "style": {},
+                                        "text": "ABC XYZ", 
+                                        "className": "name"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "component": "collection",
+                        "props": {
+                            "className": "content-email",
+                            "items": [
+                                {
+                                  "component": "label",
+                                  "props": {
+                                      "style": {},
+                                      "text": "Email: ", 
+                                      "className": "email"
+                                    }
+                                },
+                                {
+                                    "component": "label",
+                                    "props": {
+                                        "style": {},
+                                        "text": "xyzo@ltts.com", 
+                                        "className": "email"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "component": "collection",
+                        "props": {
+                            "className": "content-email",
+                            "items": [
+                                {
+                                  "component": "label",
+                                  "props": {
+                                      "style": {},
+                                      "text": "Mobile: ", 
+                                      "className": "email"
+                                    }
+                                },
+                                {
+                                    "component": "label",
+                                    "props": {
+                                        "style": {},
+                                        "text": "1234567842", 
+                                        "className": "email"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "_comments": "Tab component",
+            "component": "tab",
+            "props": {
+                "className": "tab",
+                "style": {
+                    "width": "100%"
+                },
+                "selectedId" : "1",
+                "buttons":[
+                    {
+                        "component": "button",
+                        "props": {
+                            "style": {},
+                            "text": "Home",
+                            "id" : "1",
+                            "className": "footer_btn",
+                            "icon": "Group%2034.png",
+                            "selectedIcon": "home_selected.png"
+                        }
+                    },
+                    {
+                        "component": "button",
+                        "props": {
+                            "style": {},
+                            "text": "My List",
+                            "id" : "2",
+                            "className": "footer_btn",
+                            "icon": "Group%2035.png",
+                            "selectedIcon": "Group%2027.png"
+                        }
+                    },
+                    {
+                        "component": "button",
+                        "props": {
+                            "style": {},
+                            "text": "Account",
+                            "id" : "3",
+                            "className": "footer_btn",
+                            "icon": "Group%2039.png",
+                            "selectedIcon": "Group%2044.png"
+                        }
+                    },
+                    {
+                        "component": "button",
+                        "props": {
+                            "style": {},
+                            "text": "CC",
+                            "id" : "4",
+                            "action": "Open_portal.html",
+                            "className": "footer_btn",
+                            "icon": "Group%2036.png",
+                            "selectedIcon": "Group%2030.png"
+                        }
+                    }
+                ],
+                "items": [
+                    {
+                        "component": "collection",
+                        "props": {
+                            "className": "",
+                            "id" : "1",
+                            "items": [
+                                {
+                                    "component": "label",
+                                    "props": {
+                                        "style": {},
+                                        "text": "",
+                                        "className": "footer_btn",
+                                        "icon": "Group%2034.png",
+                                        "selectedIcon": "home_selected.png"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "component": "collection",
+                        "props": {
+                            "className": "",
+                            "id" : "2",
+                            "items": [
+                                {
+                                    "component": "label",
+                                    "props": {
+                                        "style": {},
+                                        "text": "",
+                                        "className": "footer_btn",
+                                        "icon": "Group%2034.png",
+                                        "selectedIcon": "home_selected.png"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "component": "collection",
+                        "props": {
+                            "className": "",
+                            "id" : "3",
+                            "items": [
+                                {
+                                    "component": "label",
+                                    "props": {
+                                        "style": {},
+                                        "text": "",
+                                        "className": "footer_btn",
+                                        "icon": "Group%2034.png",
+                                        "selectedIcon": "home_selected.png"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "component": "collection",
+                        "props": {
+                            "className": "",
+                            "id" : "4",
+                            "items": [
+                                {
+                                    "component": "label",
+                                    "props": {
+                                        "style": {},
+                                        "text": "Control",
+                                        "className": "footer_btn",
+                                        "icon": "Group%2034.png",
+                                        "selectedIcon": "home_selected.png"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+      ]
+      }
+    },
+    "theme": {},
+    "components": {}
+  }

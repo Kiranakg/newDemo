@@ -1,0 +1,32 @@
+/*
+ * Copyright (C) 2014-2018 L&T Technology Services, All Rights Reserved.
+ *
+ * This source code and any compilation or derivative thereof is the
+ * proprietary information of L&T and is confidential in nature.
+ * Under no circumstances is this software to be exposed to or placed under
+ * an Open Source License of any type without the expressed written permission
+ * of L&T.
+ */
+
+/**
+ * @author Suryaprakash Thirumurugesan
+ */
+
+@import "css_function";
+
+$left-arrow: "common/left_arrow.png";
+$right-arrow: "common/right_arrow.png";
+
+@mixin set-icon($name) {
+  width: nth($name, 2);
+  height: nth($name, 3);
+  background: url(getImage(nth($name, 1))) no-repeat !important;
+  background-size: contain !important;
+}
+
+@mixin set-background($name) {
+  width: nth($name, 2);
+  height: nth($name, 3);
+  background: url(getImage(nth($name, 1))) no-repeat;
+  background-size: 100% 100% !important;
+}

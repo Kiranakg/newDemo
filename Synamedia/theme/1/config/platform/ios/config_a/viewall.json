@@ -1,0 +1,301 @@
+{
+  "id": "viewall",
+  "layout": {
+    "_comments": "Layout",
+    "component": "collection",
+    "props": {
+      "className":"view_all_main mobile",
+      "name" : "Root Collection",
+      "items": [
+        {
+          "_comments": "Header component",
+          "component": "collection",
+          "stateObject": {
+            "showLanguages": false
+          },
+          "props": {
+            "className": "header",
+            "style": {
+              "width": "100%"
+            },
+            "items": [
+              {
+                "component": "collection",
+                "props": {
+                  "className": "header-left-content",
+                  "items": [
+                    {
+                      "component": "button",
+                      "props": {
+                        "style": {},
+                        "text": "",
+                        "action": "Route_home",
+                        "className": "menu_btn home_btn",
+                        "icon": "Group%2053.png"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "component": "collection",
+                "props": {
+                  "className": "header-right-content",
+                  "items": [
+                    {
+                      "component": "button",
+                      "props": {
+                        "localText": "${epg}",
+                        "style": {},
+                        "day": "0",
+                        "action": "Route_epg/{day}",
+                        "className": "menu_btn epg_btn"
+                      }
+                    },
+                    {
+                      "component": "button",
+                      "props": {
+                        "style": {},
+                        "action": "toggleState_showLanguages",
+                        "className": "menu_btn combo-btn",
+                        "icon": "translate.png"
+                      }
+                    },
+                    {
+                      "component": "collection",
+                      "props": {
+                        "role": "dialog",
+                        "className": "dialog combobox popup",
+                        "visibileWithState": "showLanguages",
+                        "items": [
+                          {
+                            "component": "button",
+                            "props": {
+                              "style": {},
+                              "text": "Arabic",
+                              "id": "Id",
+                              "action": "changeLocale_ar",
+                              "className": "combobox-btn"
+                            }
+                          },
+                          {
+                            "component": "button",
+                            "props": {
+                              "style": {},
+                              "text": "English",
+                              "id": "Id",
+                              "action": "changeLocale_en",
+                              "className": "combobox-btn"
+                            }
+                          },
+                          {
+                            "component": "button",
+                            "props": {
+                              "style": {},
+                              "text": "Bengali",
+                              "id": "Id",
+                              "action": "changeLocale_bn",
+                              "className": "combobox-btn"
+                            }
+                          }
+                        ],
+                        "focus": {
+                          "up": {
+                            "nextFocusabledItemClassSelector": "up"
+                          },
+                          "down": {
+                            "nextFocusabledItemClassSelector": "down"
+                          },
+                          "left": {
+                            "nextFocusabledItemClassSelector": "none"
+                          },
+                          "right": {
+                            "nextFocusabledItemClassSelector": "none"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "_comments": "Grid Bucket Items",
+          "component": "list",
+          "name": "viewAllGridList",
+          "props": {
+            "className": "grid_list",
+            "horizontal": true,
+            "circular": false,
+            "items": "data",
+            "grid": true
+          },
+          "dataURL": "viewAllGridList",
+          "itemRenderer": [{
+            "component": "thumbnail",
+            "props": {
+              "name": "gridBucketItems1_list1_image",
+              "src": "imagery.thumbnail",
+              "fallbackSrc": "default.png",
+              "hideFallback": true,
+              "showArrow": false,
+              "imageDimension": "?d=200X200",
+              "videoId": "id",
+              "type": "content_type",
+              "synopsis": "synopsis",
+              "title": "title",
+              "src_backdrop": "imagery.backdrop",
+              "clickable": true,
+              "style": {
+                "width": "100%"
+              },
+              "className": "list-item",
+              "videoPlayerId": "video_id",
+              "action": "Route_player/{type}/{videoId}/{videoPlayerId}"
+            }
+          }]
+        },
+        {
+            "_comments": "Tab component",
+            "component": "tab",
+            "props": {
+                "className": "tab",
+                "style": {
+                    "width": "100%"
+                },
+                "selectedId" : "1",
+                "buttons":[
+                    {
+                        "component": "button",
+                        "props": {
+                            "style": {},
+                            "text": "Home",
+                            "id" : "1",
+                            "className": "footer_btn",
+                            "icon": "Group%2034.png",
+                            "selectedIcon": "home_selected.png"
+                        }
+                    },
+                    {
+                        "component": "button",
+                        "props": {
+                            "style": {},
+                            "text": "My List",
+                            "id" : "2",
+                            "className": "footer_btn",
+                            "icon": "Group%2035.png",
+                            "selectedIcon": "Group%2027.png"
+                        }
+                    },
+                    {
+                        "component": "button",
+                        "props": {
+                            "style": {},
+                            "text": "Account",
+                            "id" : "3",
+                            "className": "footer_btn",
+                            "icon": "Group%2039.png",
+                            "selectedIcon": "Group%2044.png"
+                        }
+                    },
+                    {
+                        "component": "button",
+                        "props": {
+                            "style": {},
+                            "text": "CC",
+                            "id" : "4",
+                            "action": "Open_portal.html",
+                            "className": "footer_btn",
+                            "icon": "Group%2036.png",
+                            "selectedIcon": "Group%2030.png"
+                        }
+                    }
+                ],
+                "items": [
+                    {
+                        "component": "collection",
+                        "props": {
+                            "className": "",
+                            "id" : "1",
+                            "items": [
+                                {
+                                    "component": "label",
+                                    "props": {
+                                        "style": {},
+                                        "text": "",
+                                        "className": "footer_btn",
+                                        "icon": "Group%2034.png",
+                                        "selectedIcon": "home_selected.png"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "component": "collection",
+                        "props": {
+                            "className": "",
+                            "id" : "2",
+                            "items": [
+                                {
+                                    "component": "label",
+                                    "props": {
+                                        "style": {},
+                                        "text": "",
+                                        "className": "footer_btn",
+                                        "icon": "Group%2034.png",
+                                        "selectedIcon": "home_selected.png"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "component": "collection",
+                        "props": {
+                            "className": "",
+                            "id" : "3",
+                            "items": [
+                                {
+                                    "component": "label",
+                                    "props": {
+                                        "style": {},
+                                        "text": "",
+                                        "className": "footer_btn",
+                                        "icon": "Group%2034.png",
+                                        "selectedIcon": "home_selected.png"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "component": "collection",
+                        "props": {
+                            "className": "",
+                            "id" : "4",
+                            "items": [
+                                {
+                                    "component": "label",
+                                    "props": {
+                                        "style": {},
+                                        "text": "Control",
+                                        "className": "footer_btn",
+                                        "icon": "Group%2034.png",
+                                        "selectedIcon": "home_selected.png"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+    }
+  },
+  "theme": {},
+  "components": {}
+}

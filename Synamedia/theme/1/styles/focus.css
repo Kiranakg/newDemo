@@ -1,0 +1,27 @@
+
+button.btn.guide-program:focus, button.btn.guide-channel:focus, button.btn.guide-time:focus {
+    border: 3px solid #ff9800;
+    outline: none;
+}
+
+
+    button.btn.guide-program:focus, button.btn.guide-channel:focus, button.btn.guide-time:focus {
+        border: 5px solid #ff9800;
+        outline: none;
+    }
+ .dialog .dailog-footer-ok:hover,
+  .dialog .dailog-footer-ok:focus,
+  .dialog .dailog-footer-cancel:hover,
+  .dialog .dailog-footer-cancel:focus  {
+    color: #000;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+.unfocused:focus, div:focus {
+    outline: red solid 4px;
+}

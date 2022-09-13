@@ -1,0 +1,201 @@
+{
+  "id": "player",
+  "layout": {
+    "_comments": "Layout",
+    "component": "collection",
+    "props": {
+      "className": "player-mobile-product",
+      "style": { "width": "100%" },
+      "items": [
+        {
+          "component": "video",
+          "props": {
+            "playerType": "shaka",
+            "adUrl": "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpost&cmsid=496&vid=short_onecue&correlator=",
+            "mediaSource": "url_video",
+            "controlBar": {
+              "type": "default"
+            },
+            "autoPlay": true,
+            "style": {
+              "width": "100%",
+              "height": "äuto"
+            }
+          },
+          "dataURL": "playURL",
+          "name": "playURL"
+        },
+        {
+          "component": "button",
+          "props": {
+            "hideFallback": true,
+            "text": "Back",
+            "className": "btn-back",
+            "clickable": true,
+            "action": "Route_landing"
+          }
+        },
+        {
+          "component": "list",
+          "name": "playbackItemDetails",
+          "props": {
+            "className": "content-details",
+            "items": "data",
+            "horizontal": true,
+            "scrollable": false
+          },
+          "dataURL": "playbackItemDetails",
+          "itemRenderer": [
+            {
+              "component": "collection",
+              "props": {
+                "className": "details",
+                "items": [
+                  {
+                    "component": "collection",
+                    "props": {
+                      "className": "title-section",
+                      "items": [
+                        {
+                          "component": "label",
+                          "props": {
+                            "text": "title",
+                            "className": "content-title"
+                          }
+                        },
+                        {
+                          "component": "collection",
+                          "props": {
+                            "className": "rating",
+                            "items": [
+                              {
+                                "component": "label",
+                                "props": {
+                                  "text": "production_year",
+                                  "className": "content-data"
+                                }
+                              },
+                              {
+                                "component": "label",
+                                "props": {
+                                  "text": "age_rating",
+                                  "className": "content-data"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "component": "collection",
+                    "props": {
+                      "className": "rating",
+                      "items": [
+                        {
+                          "component": "label",
+                          "props": {
+                            "text": "genres",
+                            "className": "content-data"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "component": "collection",
+                    "props": {
+                      "className": "details_left",
+                      "items": [
+                        {
+                          "component": "label",
+                          "props": {
+                            "text": "synopsis",
+                            "className": "content-data"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "component": "label",
+                    "props": {
+                      "text": "${siimilar_programs}",
+                      "className": "similar_contents content-details"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "component": "list",
+          "name": "similarPlayList",
+          "props": {
+            "style": {},
+            "_comment": "player related bucket",
+            "className": "content-details",
+            "horizontal": true,
+            "circular": false,
+            "isCarousel": false,
+            "items": "data"
+          },
+          "dataURL": "similarPlayList",
+          "itemRenderer": [
+            {
+              "component": "collection",
+              "props": {
+                "className": "title-section",
+                "items": [
+                  {
+                    "component": "image",
+                    "props": {
+                      "hideFallback": true,
+                      "forceReload": true,
+                      "src": "imagery.thumbnail",
+                      "imageDimension": "?d=200X200",
+                      "contentType": "content_type",
+                      "contentId": "id",
+                      "videoId": "video_id",
+                      "clickable": true,
+                      "style": {
+                        "width": "100%"
+                      },
+                      "action": "Route_player/{contentType}/{contentId}/{videoId}"
+                    }
+                  },
+                  {
+                    "component": "collection",
+                    "props": {
+                      "className": "detail-item-data",
+                      "items": [
+                        {
+                          "component": "label",
+                          "props": {
+                            "text": "title",
+                            "className": "title"
+                          }
+                        },
+                        {
+                          "component": "label",
+                          "props": {
+                            "text": "synopsis",
+                            "className": "content-data"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "theme": {},
+  "components": {}
+}

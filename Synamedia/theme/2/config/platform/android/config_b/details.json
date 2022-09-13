@@ -1,0 +1,222 @@
+{
+    "id": "details",
+    "layout": {
+        "_comments": "Layout",
+        "component": "collection",
+        "props": {
+            "className": "player-details",
+            "style": {"width": "100%"},
+            "items": [
+                {
+                    "_comments": "Header component",
+                    "component": "collection",
+                    "props": {
+                        "className": "header",
+                        "style": {
+                            "width": "100%"
+                        },
+                        "items": [{
+                            "component": "collection",
+                            "props": {
+                                "className": "header-left-content",
+                                "items": [{
+                                    "component": "button",
+                                    "props": {
+                                        "style": {},
+                                        "text": "",
+                                        "action": "Route_home",
+                                        "className": "menu_btn hamburger_btn",
+                                        "icon": "Group40.png"
+                                    }
+                                },
+                                    {
+                                        "component": "button",
+                                        "props": {
+                                            "style": {},
+                                            "text": "",
+                                            "action": "Route_",
+                                            "className": "menu_btn home_btn",
+                                            "icon": "Group3.png"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                            {
+                                "component": "collection",
+                                "props": {
+                                    "className": "header-right-content",
+                                    "items": [
+                                        {
+                                            "component": "button",
+                                            "props": {
+                                                "style": {},
+                                                "text": "",
+                                                "action": "Route_",
+                                                "className": "menu_btn home_btn",
+                                                "icon": "magnifier-tool.png"
+                                            }
+                                        },
+                                        {
+                                            "component": "button",
+                                            "props": {
+                                                "style": {},
+                                                "text": "",
+                                                "action": "Route_",
+                                                "className": "menu_btn home_btn",
+                                                "icon": "notifications-bell-button.png"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }]
+                    }
+                },
+                {
+                    "component": "list",
+                    "name": "playbackItemDetails",
+                    "props": {
+                        "className": "content-details",
+                        "items": "data",
+                        "horizontal": true,
+                        "scrollable": false
+                    },
+                    "dataURL": "playbackItemDetails",
+                    "itemRenderer": [
+                        {
+                            "component": "collection",
+                            "props": {
+                                "className": "item-details",
+                                "items": [
+                                    {
+                                        "component": "image",
+                                        "props": {
+                                            "src": "imagery.backdrop",
+                                            "fallbackSrc": "default.png",
+                                            "hideFallback": true,
+                                            "style": {
+                                                "width": "98%"
+                                            },
+                                            "className": "details-background"
+                                        }
+                                    },
+                                    {
+                                        "component": "label",
+                                        "props": {
+                                            "text": "title",
+                                            "className": "content-title details-contents"
+                                        }
+                                    },
+                                    {
+                                        "component": "label",
+                                        "props": {
+                                            "text": "synopsis",
+                                            "className": "content-data details-contents"
+                                        }
+                                    },
+                                    {
+                                        "component": "label",
+                                        "props": {
+                                            "text": "Genre",
+                                            "className": "content-header details-contents"
+                                        }
+                                    },
+                                    {
+                                        "component": "label",
+                                        "props": {
+                                            "text": "genres",
+                                            "className": "content-data details-contents"
+                                        }
+                                    },
+                                    {
+                                        "component": "label",
+                                        "props": {
+                                            "text": "Cast",
+                                            "className": "content-header details-contents"
+                                        }
+                                    },
+                                    {
+                                        "component": "label",
+                                        "props": {
+                                            "text": "cast",
+                                            "className": "content-data details-contents"
+                                        }
+                                    },
+                                    {
+                                        "component": "label",
+                                        "props": {
+                                            "text": "Ratings",
+                                            "className": "content-header details-contents"
+                                        }
+                                    },
+                                    {
+                                        "component": "label",
+                                        "props": {
+                                            "text": "age_rating",
+                                            "className": "content-data details-contents"
+                                        }
+                                    },
+                                    {
+                                        "component": "button",
+                                        "props": {
+                                            "text": "Play",
+                                            "type": "content_type",
+                                            "contentId": "id",
+                                            "videoId": "video_id",
+                                            "action": "Route_player/{type}/{contentId}/{videoId}",
+                                            "className": "details-contents carousel-item--btn"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "component": "label",
+                    "props": {
+                        "text": "Similar",
+                        "className": "similar_contents content-details"
+                    }
+                },
+                {
+                    "component": "list",
+                    "name": "similarPlayList",
+                    "props": {
+                        "style": {},
+                        "_comment": "player related bucket",
+                        "className" : "related-items",
+                        "horizontal": true,
+                        "circular": true,
+                        "isCarousel": false,
+                        "items": "data"
+                    },
+                    "dataURL": "similarPlayList",
+                    "itemRenderer": [
+                        {
+                            "component": "image",
+                            "props": {
+                                "hideFallback": true,
+                                "forceReload": true,
+                                "src": "imagery.thumbnail",
+                                "className": "swiper-item--image",
+                                "imageDimension": "?d=200X200",
+                                "contentType": "content_type",
+                                "synopsis": "synopsis",
+                                "title": "title",
+                                "videoId": "id",
+                                "clickable": true,
+                                "style": {
+                                    "width": "100%"
+                                },
+                                "action": "Route_details/{contentType}/{videoId}"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "theme": {},
+    "components": {}
+}

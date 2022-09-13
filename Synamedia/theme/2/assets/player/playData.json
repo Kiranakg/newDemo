@@ -1,0 +1,11 @@
+{
+  "data": {
+    "data": {
+      "id": "01",
+      "title": "Name of the Programme",
+      "description": "Description of the programme",
+      "rating": 4,
+      "playurl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+    }
+  }
+}

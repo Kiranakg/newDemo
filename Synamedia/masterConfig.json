@@ -1,0 +1,151 @@
+{
+  "view": {
+    "assetPath": "/static/media/",
+    "branding": {
+      "logo": ""
+    }
+  },
+  "theme": {
+    "id": 1,
+       "themes": [
+         {
+           "id": 1,
+           "CSS": {
+             "player":{
+               "class": "playlist-container",
+               "position": "right",
+               "button": "playlist"
+             },
+             "background":{
+               "backgroundColor": "@color"
+             },
+             "swimlane":{
+               "class": "related-items",
+               "list": "circular"
+             }
+           }
+         },
+        {
+          "id": 2,
+          "CSS": {
+            "player":{
+              "class": "playlist-container",
+              "position": "right",
+              "button": "playlist"
+            },
+            "background":{
+              "backgroundColor": "@color"
+            },
+            "swimlane":{
+              "class": "related-items",
+              "list": "circular"
+            }
+          }
+        }
+       ]
+},
+  "availableConfig": {
+    "android": {
+      "mobile": {
+        "comment": "OS Version",
+        "5": "config_a",
+        "6": "config_a",
+        "7": "config_a",
+        "8": "config_a",
+        "9": "config_a",
+        "10": "config_a",
+        "11": "config_a",
+        "12": "config_a"
+      },
+      "tablet": {
+        "comment": "OS Version",
+        "5": "config_b",
+        "6": "config_b",
+        "7": "config_b",
+        "8": "config_b",
+        "9": "config_b",
+        "10": "config_b",
+        "11": "config_b",
+        "12": "config_b"
+      }
+    },
+    "ios": {
+      "mobile": {
+        "comment": "OS Version",
+        "5": "config_a",
+        "6": "config_a",
+        "7": "config_a",
+        "8": "config_a",
+        "9": "config_a",
+        "10": "config_a",
+        "11": "config_a",
+        "12": "config_a"
+      },
+      "tablet": {
+        "comment": "OS Version",
+        "5": "config_b",
+        "6": "config_b",
+        "7": "config_b",
+        "8": "config_b",
+        "9": "config_b",
+        "10": "config_b",
+        "11": "config_b",
+        "12": "config_b"
+      }
+    },
+    "web": {
+      "comment": "Screen Resolution",
+      "768": "768",
+      "1024": "1024",
+      "1920": "1920"
+    },
+    "tv": {
+      "comment": "OS Name",
+      "webos": "webos",
+      "tizen": "tizen",
+      "android": "android",
+      "linux": "linux"
+    }
+  },
+  "locales": {
+    "list": [ "en", "ar", "bn" ],
+    "persistence": false
+  },
+  "features": {
+    "ima": {
+      "enabled": false
+    },
+    "pwa": {
+      "enabled": true
+    },
+    "analytics": {
+      "events": [ "LIST_ADD", "LIST_REMOVE", "LIST_SCROLL_UP" ],
+      "ga": {
+        "enabled": true,
+        "id": "UA-151750566-1",
+        "events": [
+          "LIST_SCROLL_LEFT",
+          "LIST_SCROLL_RIGHT",
+          "PLAYER_PLAY",
+          "PLAYER_PAUSE",
+          "BUTTON_CLICK",
+          "THUMBNAIL_CLICK",
+          "PAGE_ROUTING"
+        ]
+      },
+      "gtm": {
+        "enabled": false,
+        "id": "GTM-MC7J68W",
+        "events": [
+          "LIST_SCROLL_LEFT",
+          "LIST_SCROLL_RIGHT",
+          "PLAYER_PLAY",
+          "PLAYER_PAUSE",
+          "BUTTON_CLICK",
+          "THUMBNAIL_CLICK",
+          "PAGE_ROUTING"
+        ]
+      }
+    }
+  }
+}
